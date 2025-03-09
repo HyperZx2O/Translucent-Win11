@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/bb29775a-280f-4e63-bcc3-ec9ed0018684
 
 
 
-We have all seen our fair share of Windows ricing along with OG themes like Gruvbox, [Catppuccin](https://catppuccin.com/), [Dracula](https://draculatheme.com/) and much more. Time to feast your eyes upon a whole Translucnt Makeover of Windows, starting from changing appearance from the system level to finding alternatives to your default apps, all in one place!
+We all have seen our fair share of Windows ricing along with OG themes like Gruvbox, [Catppuccin](https://catppuccin.com/), [Dracula](https://draculatheme.com/) and much more. Time to feast your eyes upon a whole Translucent Makeover of Windows, starting from changing appearance from the system level to finding alternatives to your default apps, all in one place!
 
 > [!IMPORTANT]
 > It is advised that you go through the guide fully at least once! You can always come back to check out specific sections later on.
