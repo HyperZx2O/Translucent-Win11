@@ -14,7 +14,7 @@ We all have seen our fair share of Windows ricing along with OG themes like Gruv
 > Before following the guide, download the latest source code of this documentation from the releases page.
 
 ## Navigating this Guide
-As this is quite a long guide, the guide can be navigated using the dropdown shown in the pic below:
+As this is quite a long guide, it can be navigated easily using the dropdown shown in the pic below:
 
 ![Hal6hoxtzk](https://github.com/user-attachments/assets/f2196776-6bf3-4441-9a24-26f531a05153)
 
