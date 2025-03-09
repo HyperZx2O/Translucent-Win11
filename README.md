@@ -325,6 +325,7 @@ This marks the end of the Windows Makeover. It will likely enhance your Windows 
 - [greeeen-dev](https://github.com/greeeen-dev) for [natsumi-browser](https://github.com/greeeen-dev/natsumi-browser)
 - [TheBigWazz](https://github.com/TheBigWazz) for [Pineapple-Fried](https://github.com/TheBigWazz/Pineapple-Fried)
 - [YouCanTouCan](https://github.com/YouCanTouCan/Zen-Setup/tree/main) for [Toucan Tweaks](https://github.com/YouCanTouCan/Zen-Setup)
+- [sameerasw](https://github.com/sameerasw) for [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/) Extension.
   .....and others (in the event I missed someone)!
 
 
