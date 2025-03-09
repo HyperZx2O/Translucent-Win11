@@ -1,0 +1,89 @@
+/* --- Integrated URL Bar --- */
+
+
+
+/* Multi-toolbar */
+@media not (-moz-bool-pref: "zen.view.compact") {
+  #browser { 
+    --urlbar-min-width: 28px !important;
+  }
+
+  #nav-bar {
+    --zen-toolbar-height: 40px;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 6px 6px 0 0 !important;
+    box-shadow: none !important;
+  }  
+
+  .browserSidebarContainer {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+  }
+
+  /* Toolbar spacing */
+  #navigator-toolbox {
+    padding-top: 6px !important;
+  }
+  
+  #zen-appcontent-wrapper {
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.5);
+  margin: 7px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.2)
+  }
+  
+  #urlbar {
+    margin-bottom: 3px !important;
+  }
+}
+
+/* Single-Toolbar */
+@media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+    #browser { 
+      --urlbar-min-width: 28px !important;
+    }
+
+    #zen-appcontent-wrapper {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0);
+    margin: 5px;
+    margin-top: 0px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0)
+    }
+
+    #zen-appcontent-wrapper {
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.5);
+    margin: 7px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.2)
+    }
+
+    #navigator-toolbox {
+      padding-top: initial !important;
+    }
+
+   #zen-appcontent-wrapper:has(> #zen-tabbox-wrapper > #tabbrowser-tabbox > #tabbrowser-tabpanels:not([zen-split-view="true"])) {
+     transition: height 0.2s ease;
+
+     &>#zen-tabbox-wrapper {
+       top: calc(-1 * var(--zen-element-separation));
+       z-index: -1 !important;
+       transition: top 0.2s ease;
+     }
+
+     &:not( :has(> #zen-appcontent-navbar-container:not([zen-has-hover="true"], [has-popup-menu], :focus-within)))>#zen-tabbox-wrapper {
+       top: 0;
+     }
+
+     #tabbrowser-tabbox {
+       margin-bottom: -7px !important;
+     }
+  }
+}
+
+/* Zen Logo for menu button */
+@media (-moz-bool-pref: "pf.use.zen-menu-button") {
+  #PanelUI-menu-button image {
+    list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cstyle%3E.st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:white;%7D%3C/style%3E%3Cpath class='st0' d='M16%2C22.2c3.4%2C0%2C6.2-2.8%2C6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4%2C0-6.2%2C2.8-6.2%2C6.2C9.8%2C19.4%2C12.6%2C22.2%2C16%2C22.2z M20.9%2C16c0%2C2.7-2.2%2C4.9-4.9%2C4.9s-4.9-2.2-4.9-4.9s2.2-4.9%2C4.9-4.9S20.9%2C13.3%2C20.9%2C16z'/%3E%3Cpath class='st0' d='M26.7%2C16c0%2C5.9-4.8%2C10.7-10.7%2C10.7S5.3%2C21.9%2C5.3%2C16S10.1%2C5.3%2C16%2C5.3S26.7%2C10.1%2C26.7%2C16z M16%2C24.6 c4.8%2C0%2C8.6-3.9%2C8.6-8.6S20.8%2C7.4%2C16%2C7.4S7.4%2C11.2%2C7.4%2C16S11.2%2C24.6%2C16%2C24.6z'/%3E%3Cpath class='st0' d='M32%2C16c0%2C8.8-7.2%2C16-16%2C16S0%2C24.8%2C0%2C16S7.2%2C0%2C16%2C0S32%2C7.2%2C32%2C16z M16%2C29.1c7.3%2C0%2C13.1-5.9%2C13.1-13.1 S23.3%2C2.9%2C16%2C2.9S2.9%2C8.7%2C2.9%2C16S8.7%2C29.1%2C16%2C29.1z'/%3E%3C/svg%3E") !important;
+  }
+}

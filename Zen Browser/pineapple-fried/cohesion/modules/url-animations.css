@@ -1,0 +1,103 @@
+/* URL Bar Expand/Collapse Animation */
+#urlbar[focused] .urlbar-background {
+  animation: urlbarExpand 0.3s ease-out;
+}
+
+#urlbar:not([focused]) .urlbar-background {
+  animation: urlbarCollapse 0.2s ease-in;
+}
+
+@keyframes urlbarExpand {
+  from {
+    transform: scaleX(0.8) scaleY(0.7);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes urlbarCollapse {
+  from {
+    transform: scaleX(1) scaleY(1);
+  }
+  to {
+    transform: scaleX(0.95) scaleY(0.9);
+  }
+}
+
+/* Results Panel Animation */
+#urlbar-results {
+  animation: resultsFadeIn 0.25s ease-out;
+}
+
+@keyframes resultsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Smooth width transition */
+#urlbar {
+  transition: width 0.2s ease-in-out;
+}/* Animate each result row individually */
+#urlbar-results {
+  opacity: 1 !important; /* Ensure parent container stays visible */
+}
+
+.urlbarView-row {
+  opacity: 0;
+  animation: resultEntry 0.3s ease-out forwards;
+}
+
+/* Cascade animation with staggered delays */
+.urlbarView-row:nth-child(1) { animation-delay: 0.05s; }
+.urlbarView-row:nth-child(2) { animation-delay: 0.10s; }
+.urlbarView-row:nth-child(3) { animation-delay: 0.15s; }
+.urlbarView-row:nth-child(4) { animation-delay: 0.20s; }
+.urlbarView-row:nth-child(5) { animation-delay: 0.25s; }
+.urlbarView-row:nth-child(6) { animation-delay: 0.30s; }
+.urlbarView-row:nth-child(7) { animation-delay: 0.35s; }
+.urlbarView-row:nth-child(8) { animation-delay: 0.40s; }
+.urlbarView-row:nth-child(9) { animation-delay: 0.45s; }
+.urlbarView-row:nth-child(10) { animation-delay: 0.50s; }
+
+@keyframes resultEntry {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust original results panel animation */
+#urlbar-results {
+  animation: resultsFadeIn 0.2s ease-out;
+}
+
+@keyframes resultsFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional: Animate favicons in results */
+.urlbarView-row[type] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+  transition: transform 0.2s ease-out;
+}
+
+.urlbarView-row[type]:hover > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+  transform: scale(1.1);
+}

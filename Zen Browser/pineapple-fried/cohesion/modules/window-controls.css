@@ -1,0 +1,88 @@
+@media (-moz-bool-pref: "pf.use.window-buttons") {
+  @media not (-moz-bool-pref: "zen.view.use-single-toolbar") {
+    /* Window controls container */
+    .titlebar-buttonbox-container {
+      display: flex !important;
+      transition: all 0.2s ease;
+    }
+
+    /* Base styles for window control buttons */
+    .titlebar-button {
+      padding: 0 !important;
+      margin: 0 !important;
+      margin-bottom: 1px !important;
+      transition: all 0.2s ease;
+      min-width: 0 !important;
+      width: 3px !important; /* Collapsed to 3px */
+      overflow: hidden;
+      opacity: 0; /* Completely transparent when collapsed */
+    }
+
+    /* Expanded state when hovering container */
+    .titlebar-buttonbox-container:hover .titlebar-button {
+      width: 40px !important; /* Expanded width */
+      opacity: 1; /* Fully visible when expanded */
+    }
+
+    /* Hover states */
+    .titlebar-button:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .titlebar-close:hover {
+      background-color: rgba(255, 0, 0, 0.2) !important;
+      border-radius: 0 6px 0 0 !important;
+    }
+  }
+
+  /* Single TOolbar Mode */
+  @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+    .titlebar-buttonbox-container {
+      margin-right: 0px !important;
+    }
+
+    .titlebar-close:hover {
+      background-color: rgba(255, 0, 0, 0.2) !important;
+      border-radius: 0 6px 6px 0 !important;
+    }
+  }
+
+  /* Tabs on Right mode */
+
+  @media (-moz-bool-pref: "zen.tabs.vertical.right-side") {
+      /* Window controls container */
+    .titlebar-buttonbox-container {
+      display: flex !important;
+      transition: all 0.2s ease;
+      margin-bottom: 1px !important;
+    }
+
+    /* Base styles for window control buttons */
+    .titlebar-button {
+      padding-bottom: 11px !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+      transition: all 0.2s ease;
+      min-width: 0 !important;
+      width: 3px !important; /* Collapsed to 3px */
+      overflow: hidden;
+      opacity: 0; /* Completely transparent when collapsed */
+    }
+
+    /* Expanded state when hovering container */
+    .titlebar-buttonbox-container:hover .titlebar-button {
+      width: 40px !important; /* Expanded width */
+      opacity: 1; /* Fully visible when expanded */
+    }
+
+    /* Hover states */
+    .titlebar-button:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .titlebar-close:hover {
+      background-color: rgba(255, 0, 0, 0.2) !important;
+      border-radius: 0 6px 0 0 !important;
+    }
+  }
+}

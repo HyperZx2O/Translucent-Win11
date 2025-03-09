@@ -1,0 +1,49 @@
+  {
+    /* Natsumi URLbar appear animations */
+    --urlbar-results-animation-duration: 0s !important;
+    --urlbar-individual-result-animation-duration: .5s !important;
+    --urlbar-individual-result-animation-delay: 0.05s !important;
+    --urlbar-individual-result-animation-delay-offset: 0s !important;
+  }
+
+  /* Default URL Font Size */
+  #urlbar[breakout-extend] #urlbar-input {
+    font-size: 1.15em !important;
+  }
+
+  /* Correct Sidebar style */
+   #sidebar-box {
+     background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  #sidebar-header {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  .sidebar-panel[lwt-sidebar] {
+     border-radius: 0px 0px 0px 0px !important;
+  }
+  
+  findbar {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+
+@media (-moz-bool-pref: "pf.nt.no-container-gradient") {
+  .tabbrowser-tab {
+      .tab-background {
+          transition: revert !important;
+            &::before {
+                content: revert;
+                width: revert;
+                height: revert;
+                transition: revert;
+                opacity: revert;
+                background-color: revert;
+                mask-image: revert;
+      }
+    }
+  }        
+}
+
+
+  
