@@ -59,7 +59,7 @@ Done!
 > 3. Type out the app name
 > 4. Open the app rule
 > 5. Set the settings to this:
->    - Backdrop Type = Mica
+>    - Backdrop Type = None
 >    - Disable 'Extend frame into client area'
 >    - Disable 'Blur behind'
 
