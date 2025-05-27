@@ -1,0 +1,248 @@
+/* -------------------- Media Controls Toolbar -------------------- */
+/* Keyframes */
+@keyframes miniplayer-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#zen-media-controls-toolbar > toolbaritem {
+  border-radius: var(--nebula-border-radius) !important;
+  transition: border-radius 0.3s ease;
+  /*box-shadow: none !important;*/
+  backdrop-filter: saturate(1) !important;
+}
+
+#zen-media-controls-toolbar > toolbaritem:hover {
+  border-radius: 12px !important;
+}
+
+#zen-media-current-time,
+#zen-media-duration {
+  font-variant-numeric: tabular-nums;
+}
+
+#zen-media-controls-toolbar {
+  & > toolbaritem {
+    position: relative;
+    border-radius: var(--nebula-border-radius);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background: light-dark(rgba(235, 235, 235, 0.3), rgba(20, 20, 20, 0.3)) !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 60% 30%,
+        color-mix(in srgb, var(--zen-primary-color) 80%, transparent) 0%,
+        color-mix(in srgb, var(--zen-primary-color) 20%, transparent) 40%,
+        transparent 100%
+      );
+      background-size: 200% 200%;
+      animation: miniplayer-gradient 10s ease-in-out infinite;
+      opacity: 0;
+      filter: blur(20px) opacity(0.57);
+      z-index: -1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: light-dark(rgba(235, 235, 235, 1), rgba(20, 20, 20, 1)) !important;
+      box-shadow: 0 0px 15px light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+      &::before {
+        opacity: 0.4;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  /* Glow Gradient Styles */
+  @media (-moz-pref("nebula-glow-gradient", 0)) {
+    & > toolbaritem::before {
+      display: none;
+    }
+  }
+
+  @media (-moz-pref("nebula-glow-gradient", 2)) {
+    & > toolbaritem::before {
+      background: radial-gradient(
+        circle at 30% 30%,
+        light-dark(#ffffff, #ffffff) 0%,
+        light-dark(#ffffff, #888888) 40%,
+        light-dark(#000000, #000000) 100%
+      );
+      background-size: 200% 200%;
+      animation: miniplayer-gradient 10s ease-in-out infinite;
+      filter: blur(20px) opacity(0.57);
+      z-index: -1;
+    }
+  }
+
+  @media (-moz-pref("nebula-glow-gradient", 3)) {
+    & > toolbaritem::before {
+      background: linear-gradient(
+        45deg,
+        #e52e71,
+        #7f00ff,
+        #00c9ff,
+        #ff8a00
+      );
+      background-size: 400% 400%;
+      animation: miniplayer-gradient 17s ease-in-out infinite;
+      filter: blur(20px) opacity(0.57);
+      z-index: -1;
+    }
+  }
+
+  &.playing > toolbaritem::before {
+    opacity: 0;
+    animation: miniplayer-gradient 10s ease-in-out infinite;
+  }
+
+  &.playing > toolbaritem:hover::before {
+    opacity: 0.6;
+  }
+}
+
+
+/* --------------------- Media Info Elements --------------------- */
+#zen-media-service-hbox {
+  padding-top: 5px !important;
+  transition: padding 0.15s ease-in-out !important;
+}
+
+#zen-media-title {
+  font-weight: 720 !important;
+}
+
+#zen-media-artist {
+  font-size: 10px !important;
+}
+
+#zen-media-info-vbox::before {
+  display: none !important;
+}
+
+
+/* --------------------- Media Progress Bar ---------------------- */
+#zen-media-progress-bar {
+  &::-moz-range-thumb {
+    scale: 1;
+    transition: scale 0.2s ease;
+  }
+
+  &::-moz-range-track,
+  &::-moz-range-progress {
+    transition: height 0.2s ease;
+  }
+
+  &:hover {
+    &::-moz-range-thumb {
+      scale: 1.4;
+    }
+
+    &::-moz-range-track,
+    &::-moz-range-progress {
+      height: calc(var(--progress-height) + 2px) !important;
+    }
+  }
+}
+
+
+/* --------------------- Hidden/Utility Elements ------------------ */
+#zen-media-controls-toolbar {
+  & #zen-media-focus-button::after {
+    display: none !important;
+  }
+}
+
+
+/* ---------------------- Media Control Buttons ------------------- */
+#zen-media-focus-button,
+#zen-media-mute-button,
+#zen-media-playpause-button,
+#zen-media-nexttrack-button,
+#zen-media-previoustrack-button,
+#zen-media-close-button {
+  transition: opacity 0.3s ease-in-out, transform 0.17s ease-out;
+  opacity: 1;
+}
+
+#zen-media-focus-button:hover,
+#zen-media-mute-button:hover,
+#zen-media-playpause-button:hover,
+#zen-media-nexttrack-button:hover,
+#zen-media-previoustrack-button:hover,
+#zen-media-close-button:hover {
+  opacity: 0.8;
+  transform: scale(1.11);
+}
+
+
+/* ------------------ Media Info Hover Animation ------------------ */
+#zen-media-controls-toolbar .show-on-hover {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(0rem);
+  padding: 6px;
+  pointer-events: none;
+  filter: blur(2px);
+  transition:
+    max-height 0.3s ease,
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    padding 0.3s ease;
+}
+
+#zen-media-controls-toolbar:hover .show-on-hover {
+  max-height: 100px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 6px;
+  pointer-events: auto;
+  filter: blur(0);
+}
+
+#zen-media-controls-toolbar:not(:hover) .show-on-hover {
+  transition:
+    opacity 0.15s ease,
+    filter 0.15s ease,
+    transform 0.15s ease,
+    padding 0.15s ease,
+    max-height 0.2s ease;
+}
+
+
+/* ---------------- Delayed Fade-In Inner Elements --------------- */
+#zen-media-controls-toolbar .show-on-hover > * {
+  opacity: 0;
+  transform: translateY(0);
+  filter: blur(0px);
+  transition:
+    opacity 0.3s ease 0.2s,
+    transform 0.3s ease 0.2s,
+    filter 0.3s ease 0.2s;
+}
+
+#zen-media-controls-toolbar:hover .show-on-hover > * {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+#zen-media-controls-toolbar:not(:hover) .show-on-hover > * {
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    filter 0.15s ease;
+}

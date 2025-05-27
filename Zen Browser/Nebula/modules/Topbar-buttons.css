@@ -1,0 +1,226 @@
+/* ------------------------- BUTTONS ABOVE URLBAR ------------------------- */
+
+/* Remove padding & adjust scale for top sidebar buttons */
+#zen-sidebar-top-buttons,
+#zen-sidebar-top-buttons-customization-target {
+  & toolbarbutton:not(.titlebar-button) {
+    padding: 0px !important;
+    margin-top: -4px !important;
+    scale: 1;
+  }
+}
+
+/* Custom icon and styling for main menu button */
+toolbarbutton#PanelUI-menu-button {
+  list-style-image: url('chrome://branding/content/about-logo.svg') !important;
+  filter: grayscale(1) brightness(1.5);
+  image {
+    scale: 1.2;
+  }
+}
+
+/* === Radius for Sidebar Buttons === */
+#zen-sidebar-bottom-buttons .toolbarbutton-1,
+#zen-sidebar-top-buttons-customization-target .toolbarbutton-1 {
+  & > .toolbarbutton-icon,
+  & > .toolbarbutton-text,
+  & > .toolbarbutton-badge-stack {
+    border-radius: 11px !important;
+  }
+}
+
+#zen-sidebar-top-buttons-customization-target .toolbarbutton-1 {
+  & > .toolbarbutton-icon,
+  & > .toolbarbutton-text,
+  & > .toolbarbutton-badge-stack {
+    border-radius: 9.5px !important;
+  }
+}
+
+/* === Common Buttons with Transition + Radius === */
+#preferences-button,
+#downloads-button,
+#back-button,
+#forward-button,
+#reload-button,
+#history-panelmenu,
+#panic-button {
+  transition: background-color 0.2s ease-in-out !important;
+  border-radius: 9.5px !important;
+}
+
+/* === Keyframes === */
+@keyframes discord-hover {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+@keyframes rotate-bounce {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(-25deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rotate-bounce-1 {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(25deg); }
+  60% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* === Wiggle Animations === */
+@keyframes micro-wiggle-left {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(-2px); }
+  60% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes micro-wiggle-right {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+/* === Bounce Down === */
+@keyframes bounce-hold-down {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(2px); }
+  60% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}
+
+/* === Scale Pop === */
+@keyframes scale-pop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* animate styling */
+#preferences-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: discord-hover 1s cubic-bezier(0.35, 0.15, 0.12, 1);
+    animation-fill-mode: forwards;
+    background-color: transparent !important;
+  }
+}
+
+#reload-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: rotate-bounce-1 0.7s cubic-bezier(0.4, 0.2, 0.55, 1);
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    background-color: transparent !important;
+  }
+}
+
+#back-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: micro-wiggle-left 0.528s ease-out;
+    background-color: transparent !important;
+  }
+}
+
+#forward-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: micro-wiggle-right 0.528s ease-out;
+    background-color: transparent !important;
+  }
+}
+
+#downloads-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-badge-stack {
+    animation: bounce-hold-down 0.5s ease-out;
+    background-color: transparent !important;
+  }
+}
+
+#history-panelmenu:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: rotate-bounce 0.7s cubic-bezier(0.4, 0.2, 0.55, 1);
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    background-color: transparent !important;
+  }
+}
+
+#panic-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+  .toolbarbutton-icon {
+    animation: rotate-bounce-1 0.7s cubic-bezier(0.4, 0.2, 0.55, 1);
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    background-color: transparent !important;
+  }
+}
+
+#new-tab-button {
+  transition: background-color 0.2s ease-in-out !important;
+  border-radius: 9.5px !important;
+}
+
+#new-tab-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+#new-tab-button .toolbarbutton-icon {
+  transition: transform 0.15s ease-in-out;
+  transform-origin: center;
+  background-color: transparent !important;
+}
+
+#new-tab-button:hover .toolbarbutton-icon {
+  animation: scale-pop 0.5s ease-out;
+}
+
+#new-tab-button:active .toolbarbutton-icon {
+  transform: scale(0.65);
+}
+
+#bookmarks-menu-button {
+  transition: background-color 0.2s ease-in-out !important;
+  border-radius: 9.5px !important;
+}
+
+#bookmarks-menu-button:hover {
+  background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+#bookmarks-menu-button .toolbarbutton-icon {
+  background-color: transparent !important;
+}
+
+#bookmarks-menu-button:hover .toolbarbutton-icon {
+  animation: bounce-hold-down 0.5s ease-out;
+}
+
+/* ------------------------- WINDOWS BUTTONS ------------------------ */
+
+.titlebar-close {
+  transition: background-color 0.3s ease-out, transform 0.2s ease-in-out;
+}
+
+.titlebar-close:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  transform: scale(1);
+}
+
+.titlebar-min,
+.titlebar-max {
+  transition: background-color 0.3s ease-out, transform 0.2s ease-out;
+}
+
+.titlebar-min:hover,
+.titlebar-max:hover {
+  background-color: rgba(200, 200, 200, 0.2);
+  transform: scale(1);
+}

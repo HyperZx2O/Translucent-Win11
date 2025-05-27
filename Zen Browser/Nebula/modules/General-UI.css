@@ -1,0 +1,76 @@
+/* ------------------------- GENERAL ZEN UI ------------------------- */
+/* main ui tint */
+#zen-main-app-wrapper {
+  background: var(--nebula-ui-tint) !important;
+}
+
+/* website tint */
+browser[transparent='true'] {
+  background: var(--nebula-website-tint) !important;
+}
+
+/* Hide identity label for Bonjourr */
+#identity-icon-label[value="Extension (Bonjourr · Minimalist Startpage)"] {
+  display: none !important;
+}
+
+:root {
+  --attention-dot-color: transparent !important; /* remove attention dot */
+  --zen-themed-toolbar-bg-transparent: transparent !important; /* fix for transparency */
+}
+
+/* Required for blur rendering */
+browser {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* --------------------- TABS: NO SHADOW --------------------- */
+
+hbox.browserSidebarContainer,
+#zen-tabbox-wrapper {
+  @media (-moz-pref("nebula-tabs-no-shadow")) {
+    box-shadow: none !important;
+  }
+}
+
+/* ---------------------- NOGAPS MOD ------------------------ */
+
+@media (-moz-pref("nebula-nogaps-mod")) {
+  [zen-single-toolbar="true"] {
+    #zen-appcontent-wrapper {
+      position: relative;
+    }
+
+    #zen-appcontent-navbar-wrapper {
+      position: absolute;
+      width: 100% !important;
+      height: 50px; /* Optional: thicker navbar */
+      backdrop-filter: blur(30px) saturate(110%) contrast(110%);
+      background: var(--zen-main-browser-background) !important;
+      border-bottom: 1.7px solid light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.1));
+    }
+
+    #zen-tabbox-wrapper {
+      margin: 0 !important;
+    }
+
+    .browserSidebarContainer {
+      border-radius: 0px !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* ------------------- FLOATING STATUSBAR ------------------- */
+/* Credit to the mod */
+
+#statuspanel {
+  margin: 10px !important;
+}
+
+#statuspanel-label {
+  border-radius: 11px !important;
+  padding: 3px 10px !important;
+  border: 1px solid var(--zen-colors-border) !important;
+  background: light-dark(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.9)) !important;
+}

@@ -1,0 +1,36 @@
+/*  Menu Button */
+#PanelUI-menu-button image{
+    list-style-image: url("Icons/Zen-Logo.svg") !important;
+    }
+/*  Unified Extensions Button */
+#unified-extensions-button image{
+    list-style-image: url("Icons/Extension-Icon.png") !important;
+    }
+/* uBlock Origin */
+#ublock0_raymondhill_net-BAP image{
+    list-style-image: url("Icons/uBlock-Origin.svg") !important;
+    }
+/* Dark Reader */
+#addon_darkreader_org-BAP image{
+    list-style-image: url("Icons/Dark-Reader.svg") !important;
+    }
+/*  Zotero Connector */
+#zotero_chnm_gmu_edu-BAP image{
+    list-style-image: url("Icons/Zotero-Connector.svg") !important;
+    }
+/*  Cast Kodi */
+#castkodi_regseb_github_io-BAP image{
+    list-style-image: url("Icons/Cast-Kodi.svg") !important;
+    }
+/*  KeepassXC-Browser */
+#keepassxc-browser_keepassxc_org-BAP image{
+    list-style-image: url("Icons/KeepassXC-Browser.svg") !important;
+    }
+/*  ProtonPass */
+#78272b6fa58f4a1abaac99321d503a20_proton_me-BAP image{
+    list-style-image: url("Icons/ProtonPass.svg") !important;
+    }
+/*  Bitwarden */
+#_446900e4-71c2-419f-a6a7-df9c091e268b_-BAP image{
+    list-style-image: url("Icons/Bitwarden.svg") !important;
+    }

@@ -1,0 +1,186 @@
+/* === SVG Separator Line === */
+.vertical-pinned-tabs-container-separator {
+    background: none !important; /* Remove original background line */
+    height: 16px !important; /* Set fixed height */
+    max-height: none !important; /* Remove max-height restriction */
+    display: flex !important; /* Use flexbox to center SVG */
+    flex-direction: row !important; /* Arrange items horizontally */
+    align-items: center !important; /* Vertically center items */
+    justify-content: flex-end !important; /* Align items to the right */
+    overflow: hidden !important; /* Hide overflow during animation */
+    border: none !important; /* Ensure no border is applied by default */
+    width: 100% !important;; /* Ensure separator takes full available width */
+    box-sizing: border-box !important; /* Include padding in width */
+    gap: 0; /* Set initial gap to 0 */
+    margin: 5px 0 5px 0 !important;
+  }
+  
+  
+  
+  .vertical-pinned-tabs-container-separator svg {
+    width: 100% !important; /* Set width explicitly to account for padding */
+    height: 1.5px; /* Reduced from 2px to make thinner line */
+    display: block; /* Ensure SVG behaves as a block element */
+    overflow: visible; /* Allow potential animations to go outside bounds */
+    transition: width 0.15s ease-in-out; /* Add transition for width */
+    min-width: 0; /* Allow shrinking below intrinsic size */
+    margin-right: 0; /* Reduced from 8px to decrease space between line and buttons */
+  }
+  
+  /* Shrink SVG width on separator hover */
+  .vertical-pinned-tabs-container-separator:hover svg {
+     width: calc(100% - 100px) !important; 
+  }
+  
+  /* Update SVG line selectors to path */
+  .vertical-pinned-tabs-container-separator svg path {
+    stroke: light-dark(rgba(1, 1, 1, 0.15), rgba(255, 255, 255, 0.2)); /* Line color */
+    stroke-width: 1px !important; /* Reduced from 1.5px to make thinner line */
+    vector-effect: non-scaling-stroke; /* Keep stroke width consistent on scaling */
+    fill: none; /* Ensure path isn't filled */
+    transition: stroke 0.15s ease-in-out; /* Add transition for color */
+  }
+  
+  /* Optional: Change path color slightly on hover */
+  .vertical-pinned-tabs-container-separator:hover svg path {
+      stroke: light-dark(rgba(1, 1, 1, 0.3), rgba(255, 255, 255, 0.4));
+  }
+  
+  /* --- End SVG Path Animation --- */
+  
+  /* Sort & Clear Button Styling & Animation */
+  .vertical-pinned-tabs-container-separator #sort-button,
+  .vertical-pinned-tabs-container-separator #clear-button {
+      /* Inherits font-size, color from tab_sort.uc.js */
+      flex-shrink: 0; /* Prevent button from shrinking */
+      min-width: 0; /* Ensure it can shrink to zero */
+      max-width: 0; /* Use max-width to control hidden state */
+      opacity: 0; /* Start fully transparent */
+      overflow: hidden; /* Hide content when width is 0 */
+      pointer-events: none; /* Not interactive initially */
+      transition: max-width 0.15s ease-in-out, opacity 0.1s ease-in-out 0.05s; /* Transition max-width */
+      margin: 0 !important; /* Override any potential margins */
+      padding: 0 !important; /* Force zero padding initially */
+      white-space: nowrap; /* Prevent label wrapping */
+      border-radius: 4px; /* Match hover state */
+  }
+  
+  .vertical-pinned-tabs-container-separator:hover #sort-button,
+  .vertical-pinned-tabs-container-separator:hover #clear-button {
+      max-width: 45px !important; /* Reduced from 55px to make buttons smaller */
+      opacity: 1; /* Fade in */
+      pointer-events: auto; /* Become interactive */
+      padding: 1px !important; /* Restore original padding */
+      margin-left: 2px !important; /* Reduced from 4px to decrease space between buttons */
+      cursor: pointer !important;
+  }
+  
+  /* Hide the line if the separator is meant to be hidden (e.g., no sortable tabs) */
+  #vertical-pinned-tabs-container .zen-workspace-tabs-section[hide-separator] .vertical-pinned-tabs-container-separator,
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs {
+      max-height: 0 !important;
+      margin: 0 auto !important;
+      padding: 0 !important; /* Remove padding when hidden */
+      border: none !important; /* Ensure no border shows up */
+      overflow: hidden !important; /* Hide content when container is hidden */
+      gap: 0 !important; /* Remove gap when hidden */
+  }
+  
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs svg,
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
+      display: none !important; /* Specifically hide the SVG and buttons */
+      width: 0 !important;
+      opacity: 0 !important;
+  }
+  /* === END SVG Separator Line === */
+  
+  /* Button icons styling */
+  #sort-button, #clear-button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 11px !important; /* Reduced font size */
+  }
+  
+  #sort-button .broom-icon {
+      width: 12px !important; /* Reduced from 14px */
+      height: 12px !important; /* Reduced from 14px */
+      margin-right: 2px !important; /* Reduced from 4px */
+      fill: currentColor !important;
+  }
+  
+  #clear-button .arrow-icon {
+      width: 12px !important; /* Reduced from 14px */
+      height: 12px !important; /* Reduced from 14px */
+      margin-right: 2px !important; /* Reduced from 4px */
+      stroke: currentColor !important;
+  }
+  
+  #sort-button .toolbarbutton-text,
+  #clear-button .toolbarbutton-text {
+      margin-left: 1px !important; /* Reduced from 2px */
+  }
+  
+  /* Broom brushing animation - updated */
+  @keyframes brush-sweep {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); }
+    40% { transform: rotate(15deg); }
+    60% { transform: rotate(-15deg); }
+    80% { transform: rotate(15deg); }  
+    100% { transform: rotate(0deg); }
+  }
+  
+  #sort-button.brushing .broom-icon {
+    animation: brush-sweep 0.8s ease-in-out;
+    transform-origin: 50% 50%; /* Center of broom */
+  }
+  
+  /* Arrow pulse animation */
+  @keyframes arrow-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  #clear-button.clearing .arrow-icon {
+    animation: arrow-pulse 0.6s ease-in-out;
+  }
+  
+  #sort-button.hidden-button, #clear-button.hidden-button {
+      display: none !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
+      max-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+  }
+  
+  /* Shrink SVG width on separator hover when no buttons are visible */
+  .vertical-pinned-tabs-container-separator:hover svg {
+     /* Calculate width relative to the base width */
+     width: calc(100% - 
+       (100px * 
+         (1 - 
+           (var(--sort-button-hidden, 0) * var(--clear-button-hidden, 0))
+         )
+       )
+     ) !important; 
+  }
+  
+  /* Hide the buttons entirely when they're hidden */
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #sort-button,
+  .vertical-pinned-tabs-container-separator.has-no-sortable-tabs #clear-button {
+      display: none !important; /* Specifically hide the buttons */
+      width: 0 !important;
+      opacity: 0 !important;
+  }
+  
+  /* The separator is always visible, even if buttons are hidden */
+  .vertical-pinned-tabs-container-separator {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+  }

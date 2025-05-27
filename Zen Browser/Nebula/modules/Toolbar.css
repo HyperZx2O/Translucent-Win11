@@ -1,0 +1,56 @@
+/* ------------------------- BETTER TOOLBAR ------------------------- */
+
+/* Main toolbar container */
+#customization-container {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  height: 80%;
+  width: 70%;
+  padding: 10px;
+  border-radius: 12px;
+  background: light-dark(rgba(255,255,255,0.32), rgba(0,0,0,0.3)) !important;
+}
+
+/* When vertical tabs are on the right side */
+@media (-moz-pref("zen.tabs.vertical.right-side")) {
+  #customization-container {
+    left: 10px;
+  }
+
+  #customization-container #customization-content-container {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Panel container padding */
+#customization-container #customization-panel-container {
+  padding: 10px !important;
+}
+
+/* Remove arrow offset */
+#customization-container #customization-panelWrapper {
+  --panel-arrow-offset: 0px;
+}
+
+/* Hide arrow box */
+#customization-container .panel-arrowbox {
+  display: none !important;
+}
+
+/* Style panel content */
+#customization-container .panel-arrowcontent {
+  height: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 8px;
+  background: light-dark(rgba(255,255,255,0.8), rgba(0,0,0,0.4)) !important;
+}
+
+/* Responsive check (for debugging purposes) */
+@media (max-width: 700px) {
+  #customization-container {
+    border: 2px solid red; /* TEMP: visual indicator for low width */
+  }
+}
