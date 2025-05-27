@@ -1,8 +1,12 @@
+<p align="center"> <img src="https://github.com/user-attachments/assets/f95f46e2-002d-4906-b7bb-9f1c430377a3" alt="Logo" width="300" height="300" align="centre"> </p>
+
 # <p align="center"> Translucent Win11 </p>
 
 
 
-https://github.com/user-attachments/assets/bb29775a-280f-4e63-bcc3-ec9ed0018684
+
+https://github.com/user-attachments/assets/e84da7f7-7554-46d0-951d-1fec3c70cc40
+
 
 
 
@@ -16,7 +20,8 @@ We all have seen our fair share of Windows ricing along with OG themes like Gruv
 ## Navigating this Guide
 As this is quite a long guide, it can be navigated easily using the dropdown shown in the pic below:
 
-![Hal6hoxtzk](https://github.com/user-attachments/assets/f2196776-6bf3-4441-9a24-26f531a05153)
+
+![zen_AHxNFGLRKY](https://github.com/user-attachments/assets/6ae23a8a-e6fd-4e39-a05e-8d136be89c45)
 
 
 ## Requirement
@@ -33,8 +38,9 @@ Rectify11 is a tool that allows you to customize your Windows 11 experience and 
 2. Install it using the installer
 3. Open the Rectify11 Control Center.exe from Desktop
 4. Choose the theme 'Rectify11 Dark Theme with Mica.
-   
-![explorer_Y47rJYUdsf](https://github.com/user-attachments/assets/176005b8-5782-4f0f-b482-3e9746c05826)
+
+
+![Rectify11](https://github.com/user-attachments/assets/d00db426-1f2c-440c-b228-9794eab6a4b8)
 
 
 Enjoy the new experience, from a stunning new Explorer with amazing animations!
@@ -47,8 +53,9 @@ The tool that will enable a blurred transparency over all the other apps startin
 1. Install the app from the latest [releases](https://github.com/MicaForEveryone/MicaForEveryone/releases). Always choose the MicaForEveryone.appinstaller.
 2. Open the app and choose 'Global' rule.
 3. Set it according to the following:
-   
-   ![MicaForEveryone App_RWt0IKvofZ](https://github.com/user-attachments/assets/511b47b5-3bd4-45da-b314-8359e5855cc5)
+
+
+![MFE](https://github.com/user-attachments/assets/4bba6ecb-5012-4ba6-ae1a-564e87aee116)
 
 Done!
 
@@ -72,7 +79,8 @@ Done!
    - txt = Install the mod and add the customized css in the mod page
 Here's a tutorial on how to do this:
 
-https://github.com/user-attachments/assets/18c404c5-29d8-430f-a59a-77cc3b29832f
+
+https://github.com/user-attachments/assets/e4955256-73df-4700-bc42-edb3d2bfb235
 
 You're done!
 
@@ -87,7 +95,8 @@ You're done!
 5. Ctrl + Right Click on the desktop, it reloads Nilesoft Shell in your desktop.
 6. In case of confusion, follow the video guide below:
 
-https://github.com/user-attachments/assets/e2d93323-7355-4182-be82-ea6851dc128a
+
+https://github.com/user-attachments/assets/b9d69d9a-2324-45ae-b385-acaa0942d1ad
 
 You're done!
 
@@ -105,7 +114,8 @@ It replaces your default File Explorer in case you want to.
 1. Install the app
 3. Follow the video below to achieve transparency:
 
-https://github.com/user-attachments/assets/e1170f25-6b59-4df7-bf80-c8e4458640ad
+
+https://github.com/user-attachments/assets/d1d2c6f0-7feb-4f2d-b093-0b54989e8b0c
 
 You're done!
 
@@ -118,7 +128,8 @@ It replaces your Terminal in case you want to. It comes packed with features as 
 1. Install the app
 2. Follow the video guide below:
 
-https://github.com/user-attachments/assets/272b34df-59dc-46d4-a68e-29b7d279dbd1
+
+https://github.com/user-attachments/assets/711b472d-ada8-40df-84d5-74aefe858b29
 
 ## [Zen Browser](https://zen-browser.app/)
 
@@ -130,7 +141,7 @@ In my humble opinion, the best browser on the internet in terms of customization
 2. Go through the onboarding experience.
 3. Type 'about:support' and enter.
 4. Click 'Open Folder' beside the 'Profile Folder' option. It will redirect you to a folder with lots of stuff. Don't worry.
-5. Create a 'chrome' folder (You shouldn't already have one if you're new, however if it's there, perfectly fine.
+5. Create a 'chrome' folder (You shouldn't already have one if you're new, however if it's there, perfectly fine).
 6. Copy the chrome content from the downloaded source code of my repo from releases, then paste it into your own chrome folder.
 7. Go back to 'about:support' in the browser and click 'Clear Startup Cache'. It wil restart the browser with the new customization.
 8. Install the [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/) extension. Open it and make it fetch the latest styles. This is the goated extension to make your websites look transparent
@@ -141,33 +152,23 @@ Do it in this order
 - `browser.tabs.allow_transparent_browser` = true
 - `zen.workspaces.show-workspace-indicator` = false
 - `zen.widget.windows.acrylic` = false
-- `natsumi.experiments.rounded-pip` = true
-- `natsumi.navbar.float` = true
-- `natsumi.navbar.glass-effect`  = true
-- `natsumi.pdfjs.compact` = false
-- `natsumi.sidebar.blur-zen-sidebar` = true
-- `natsumi.sidebar.containers-no-inactive-border` = true
-- `natsumi.sidebar.floating-panel` = true
-- `natsumi.sidebar.panel-glass-effect` = true
-- `natsumi.sidebar.tabs-glass-effect` = true
-- `natsumi.sidebar.zen-sidebar-glass-effect` = true
-- `natsumi.theme.clip-path-force-polygon` = true
-- `pf.use.natsumi-tweaks` = true
 
 In case of confusion, follow the video guide below:
 
 
-https://github.com/user-attachments/assets/03cf9d45-bb25-4d0f-87c8-205319da831c
+https://github.com/user-attachments/assets/0b2eca09-705e-435f-9a40-9255a23fd252
 
 
-### How to pin extensions
+### How to pin extensions in toolbar
 
-1. Pin your extension
+1. Pin your extension in sidebar with right click
 2. Right click on sidebar > Customise Toolbar
 3. Drag your extension over the Essentials
 4. Follow the below video guide if confused:
 
-https://github.com/user-attachments/assets/e716ffb5-a637-4a4e-a25a-9e547dc1940c
+
+https://github.com/user-attachments/assets/a9cbc4e5-70fc-4cd9-bfd3-2bdfc0dd9db0
+
 
 ### Zen Mods
 - [Animations Plus ](https://zen-browser.app/mods/f4866f39-cfd6-4498-ab92-54213b8279dc/)
@@ -196,8 +197,19 @@ https://github.com/user-attachments/assets/e716ffb5-a637-4a4e-a25a-9e547dc1940c
   
 ![Screenshot 2025-03-09 at 15-56-22 Settings](https://github.com/user-attachments/assets/e8b7d537-b34c-4a01-8ce0-03b8ddc4d2a4)
 
+- [Transparent Zen](https://zen-browser.app/mods/642854b5-88b4-4c40-b256-e035532109df/)
+  
+![Screenshot 2025-05-27 at 21-26-51 Settings](https://github.com/user-attachments/assets/51a33b5f-5819-43c8-b5d9-cfc893ed1548)
+
 > [!NOTE]
-> An alternative to this would be [Arc-2.0](https://github.com/YashjitPal/Arc-2.0)! A very cool looking setup and highly recommended by the community too!
+> An alternative to this would be [Arc-2.0](https://github.com/YashjitPal/Arc-2.0), [Zenppuccin](https://github.com/Mohammed55Z/Zenppuccin) and [Arcline](https://github.com/ferrocyante/Arcline) ! They are very cool looking setups and highly recommended by the community too!
+
+
+### Additional Customizations
+- [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig/tree/master) [Required for javascript mods to work]
+- [Bubble pop Deleting](https://github.com/Zylaah/bubble-pop-deleting)
+- [Sine](https://github.com/CosmoCreeper/Sine) [Custom mod store, goated]
+- [Anom12](https://github.com/Anoms12?tab=repositories)'s Repositories [Zen-Haven, Tidy Downloads, so forth and so on]
   
 You're done!
 
@@ -209,7 +221,9 @@ A fantastic replacement to default image viewer
 1. Install the app
 2. Follow the video guide below:
 
-https://github.com/user-attachments/assets/56c8c39e-bf66-4ff1-8c90-2a605567242b
+
+https://github.com/user-attachments/assets/7e48cd6f-4adc-4f11-af70-bdd51ca3ffc7
+
 
 ## [qBittorrent](https://www.qbittorrent.org/)
 One of the best torrent clients out there. Supports custom themes, which makes it so good.
@@ -221,7 +235,9 @@ One of the best torrent clients out there. Supports custom themes, which makes i
 5. Redirect it to the qbtheme file.
 6. Follow the video guide below if confused:
 
-https://github.com/user-attachments/assets/76d3a002-f755-46df-9cc4-34bb512fdc49
+
+https://github.com/user-attachments/assets/4f6ac2d6-506e-46ec-b56b-089d4169b300
+
 
 You're done!
 
@@ -315,6 +331,13 @@ This theme follows the Windows Fluent Design theory.
 - Fix Listening On
 - Centered Lyrics
 
+## [Tacky Borders](https://github.com/lukeyou05/tacky-borders)
+>   Customizable borders for Windows 11 and 10
+
+
+https://github.com/user-attachments/assets/c5cf82de-84c7-4ff0-83b6-fd8de39aba4f
+
+
 You're done!
 
 This marks the end of the Windows Makeover. It will likely enhance your Windows and Internet experience way more if you're into glassmorphism and bit. Thanks for staying till the end!
@@ -322,8 +345,8 @@ This marks the end of the Windows Makeover. It will likely enhance your Windows 
 # Acknowledgements
 
 - The app developers for their respective apps!
-- [greeeen-dev](https://github.com/greeeen-dev) for [natsumi-browser](https://github.com/greeeen-dev/natsumi-browser)
-- [TheBigWazz](https://github.com/TheBigWazz) for [Pineapple-Fried](https://github.com/TheBigWazz/Pineapple-Fried)
+- [Ahnaf Hasan](https://www.facebook.com/ahnafhasan0110) for the logo!
+- [JustAdumbPrsn](https://github.com/JustAdumbPrsn) for [Nebula](https://github.com/JustAdumbPrsn/Zen-Nebula)
 - [YouCanTouCan](https://github.com/YouCanTouCan/Zen-Setup/tree/main) for [Toucan Tweaks](https://github.com/YouCanTouCan/Zen-Setup)
 - [sameerasw](https://github.com/sameerasw) for [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/) Extension.
   .....and others (in the event I missed someone)!
