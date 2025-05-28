@@ -351,6 +351,10 @@ This marks the end of the Windows Makeover. It will likely enhance your Windows 
 - [sameerasw](https://github.com/sameerasw) for [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/) Extension.
   .....and others (in the event I missed someone)!
 
+  ## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=HyperZx2O/Translucent-Win11&type=Date)](https://www.star-history.com/#HyperZx2O/Translucent-Win11&Date)
+
 
 
 
